@@ -10,6 +10,7 @@ from .serializers import (
     MovieRetrieveSerializer,
     MovieSessionSerializer,
     MovieSessionListSerializer,
+    MovieSessionRetrieveSerializer,
 )
 
 
