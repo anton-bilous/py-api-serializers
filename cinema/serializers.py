@@ -27,6 +27,15 @@ class MovieSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class MovieListSerializer(MovieSerializer):
+    genres = serializers.SlugRelatedField(
+        many=True,
+        read_only=True,
+        slug_field="name",
+    )
+    actors = serializers.StringRelatedField(many=True, read_only=True)
+
+
 class MovieSessionSerializer(serializers.ModelSerializer):
     class Meta:
         model = MovieSession
