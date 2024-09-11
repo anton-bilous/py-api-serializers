@@ -70,5 +70,5 @@ class MovieSessionListSerializer(serializers.ModelSerializer):
 
 
 class MovieSessionRetrieveSerializer(MovieSessionSerializer):
-    movie = MovieListSerializer()
-    cinema_hall = CinemaHallSerializer()
+    movie = MovieListSerializer(read_only=True)
+    cinema_hall = CinemaHallSerializer(read_only=True)
