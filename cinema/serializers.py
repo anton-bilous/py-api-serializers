@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Genre, Actor
+from .models import Genre, Actor, CinemaHall
 
 
 class GenreSerializer(serializers.ModelSerializer):
@@ -12,4 +12,10 @@ class GenreSerializer(serializers.ModelSerializer):
 class ActorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Actor
+        fields = "__all__"
+
+
+class CinemaHallSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CinemaHall
         fields = "__all__"
